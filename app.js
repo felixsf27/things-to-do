@@ -12,19 +12,31 @@ function setLang(lang) {
   render();
 }
 
-function isChecked(listId, i) {
-  return localStorage.getItem(`checked:${listId}:${i}`) === "1";
+// Stabiler Schlüssel pro Item (an den englischen Text gekoppelt, nicht an die Position),
+// damit Haken auch dann stimmen bleiben, wenn Punkte in data.js umsortiert werden.
+function hashStr(s) {
+  let h = 0;
+  for (let i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) | 0;
+  return h.toString(36);
 }
 
-function toggleChecked(listId, i) {
-  const key = `checked:${listId}:${i}`;
+function itemKey(listId, item) {
+  return `checked:${listId}:${hashStr(item.en)}`;
+}
+
+function isChecked(listId, item) {
+  return localStorage.getItem(itemKey(listId, item)) === "1";
+}
+
+function toggleChecked(listId, item) {
+  const key = itemKey(listId, item);
   const now = localStorage.getItem(key) === "1";
   if (now) localStorage.removeItem(key);
   else localStorage.setItem(key, "1");
 }
 
 function progress(list) {
-  const done = list.items.filter((_, i) => isChecked(list.id, i)).length;
+  const done = list.items.filter(item => isChecked(list.id, item)).length;
   return { done, total: list.items.length };
 }
 
@@ -70,18 +82,18 @@ function renderList(lang, listId) {
     <h2 class="list-title">${list.title[lang]}</h2>
     <p class="list-source">${s.source}: <a href="${list.source}" target="_blank" rel="noopener">${list.source}</a></p>
     ${list.items.map((item, i) => `
-      <div class="item ${isChecked(list.id, i) ? "done" : ""}" data-index="${i}">
-        <input type="checkbox" ${isChecked(list.id, i) ? "checked" : ""} />
+      <div class="item ${isChecked(list.id, item) ? "done" : ""}" data-index="${i}">
+        <input type="checkbox" ${isChecked(list.id, item) ? "checked" : ""} />
         <span>${item[lang]}</span>
       </div>
     `).join("")}
   `;
   main.querySelectorAll(".item").forEach(el => {
     el.addEventListener("click", (e) => {
-      const i = Number(el.dataset.index);
-      toggleChecked(list.id, i);
+      const item = list.items[Number(el.dataset.index)];
+      toggleChecked(list.id, item);
       el.classList.toggle("done");
-      el.querySelector("input").checked = isChecked(list.id, i);
+      el.querySelector("input").checked = isChecked(list.id, item);
     });
   });
 }
