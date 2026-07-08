@@ -203,5 +203,41 @@ const LISTS = [
         en: "The Sixth Sense — A young child confides in a psychologist that he can see dead people, in a story that ends with one of the craziest twists in cinematic history"
       }
     ]
+  },
+  {
+    id: "doomscrolling-habits",
+    date: "2026-07-08",
+    source: "https://www.instagram.com/reel/DaGeW4CyyLo/",
+    title: { de: "10 Habits gegen Doomscrolling", en: "10 Habits To Replace Doomscrolling" },
+    items: [
+      {
+        de: "Sobald der Scroll-Drang kommt: 20 Liegestütze, Handy bleibt liegen bis der Satz fertig ist",
+        en: "Do 20 pushups the moment you feel the urge to scroll — phone stays down until the set is finished"
+      },
+      {
+        de: "Jemanden anrufen statt zu texten — nur Stimme, kein Tippen",
+        en: "Call someone instead of texting them — voice only, no typing"
+      },
+      {
+        de: "Nach dem Essen einen 15-minütigen Spaziergang machen statt auf die Couch zu sitzen",
+        en: "Take a walk after dinner instead of sitting down on the couch — outside, no destination, 15 minutes"
+      },
+      {
+        de: "Eine Schublade oder einen Ordner aufräumen, den du seit Ewigkeiten vermeidest",
+        en: "Clear one drawer or folder you've been avoiding — physical mess, not a digital one"
+      },
+      {
+        de: "Sobald du zum Handy greifst: zwei Seiten in einem Buch lesen (gleiche Hand, anderes Objekt)",
+        en: "Read two pages of a book the moment you reach for your phone — same hand, different object"
+      },
+      {
+        de: "10 Minuten eine Fähigkeit selbst üben statt jemandem dabei zuzusehen",
+        en: "Practice a skill for 10 minutes instead of watching someone else do it"
+      },
+      {
+        de: "2 Minuten draußen sitzen, bevor du wieder reingehst — nichts in den Händen, nichts läuft",
+        en: "Sit outside for 2 minutes before you go back indoors — nothing in your hands, nothing playing"
+      }
+    ]
   }
 ];
