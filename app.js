@@ -40,6 +40,19 @@ function progress(list) {
   return { done, total: list.items.length };
 }
 
+// Text escapen, bevor er ins HTML eingefügt wird — Schutz gegen XSS,
+// falls Inhalte in data.js mal Sonderzeichen wie < oder & enthalten.
+function esc(str) {
+  const div = document.createElement("div");
+  div.textContent = str ?? "";
+  return div.innerHTML;
+}
+
+// Nur http/https-Links zulassen (kein javascript:-URI etc.)
+function safeUrl(url) {
+  return /^https?:\/\//i.test(url) ? url : "#";
+}
+
 function renderHeader(lang) {
   const s = STRINGS[lang];
   document.getElementById("app-title").textContent = s.title;
@@ -60,9 +73,9 @@ function renderHome(lang) {
     const { done, total } = progress(list);
     const pct = total ? Math.round((done / total) * 100) : 0;
     return `
-      <a class="card" href="#/list/${list.id}">
-        <h2>${list.title[lang]}</h2>
-        <div class="meta"><span>${done}/${total}</span><span>${list.date}</span></div>
+      <a class="card" href="#/list/${esc(list.id)}">
+        <h2>${esc(list.title[lang])}</h2>
+        <div class="meta"><span>${done}/${total}</span><span>${esc(list.date)}</span></div>
         <div class="progress-bar"><div style="width:${pct}%"></div></div>
       </a>
     `;
@@ -79,12 +92,12 @@ function renderList(lang, listId) {
   }
   main.innerHTML = `
     <a class="back-link" href="#/">${s.back}</a>
-    <h2 class="list-title">${list.title[lang]}</h2>
-    <p class="list-source">${s.source}: <a href="${list.source}" target="_blank" rel="noopener">${list.source}</a></p>
+    <h2 class="list-title">${esc(list.title[lang])}</h2>
+    <p class="list-source">${s.source}: <a href="${esc(safeUrl(list.source))}" target="_blank" rel="noopener noreferrer">${esc(list.source)}</a></p>
     ${list.items.map((item, i) => `
       <div class="item ${isChecked(list.id, item) ? "done" : ""}" data-index="${i}">
         <input type="checkbox" ${isChecked(list.id, item) ? "checked" : ""} />
-        <span>${item[lang]}</span>
+        <span>${esc(item[lang])}</span>
       </div>
     `).join("")}
   `;
