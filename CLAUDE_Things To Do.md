@@ -27,6 +27,13 @@ Startseite zeigt alle Listen als Karten mit Fortschritt. Jede Liste ist eine eig
 - Nach jeder Änderung: committen + pushen (wie bei Uptrail — nicht vorher fragen)
 - GitHub Pages braucht nach Push meist 1-2 Minuten zum Neu-Deployen
 
+## Sicherheit
+
+- Kein Login, kein Backend, keine Tokens — bewusst so gewollt (Felix' Vorgabe)
+- Service Worker: Network-First (Updates kommen automatisch an, kein Neuinstallieren nötig)
+- Haken hängen am Item-Text (Hash), nicht an der Position — robust gegen Umsortierung in `data.js`
+- Alle dynamischen Texte werden vor dem Einfügen ins HTML escaped (`esc()` in `app.js`), Links nur wenn http/https (`safeUrl()`) — Schutz gegen XSS, falls `data.js` mal Sonderzeichen enthält
+
 ## Status
 
-08.07.2026: Erste Version live. 4 Listen aus den ersten 4 transkribierten Reels (Genius Habits, Cool Bets, Uncomfortable Hobbies, Confidence Habits). Repo musste öffentlich gestellt werden (GitHub Free unterstützt kein Pages auf privaten Repos).
+08.07.2026: Erste Version live. 4 Listen aus den ersten 4 transkribierten Reels (Genius Habits, Cool Bets, Uncomfortable Hobbies, Confidence Habits). Repo musste öffentlich gestellt werden (GitHub Free unterstützt kein Pages auf privaten Repos). Danach zwei Härtungs-Updates: Service Worker auf Network-First (Auto-Update) und XSS-Escaping nach einem Instagram-Reel über Login-Sicherheitslücken (Reel selbst nicht als Checkliste übernommen, nur als Anlass für den Sicherheits-Check genutzt).

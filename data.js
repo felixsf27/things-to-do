@@ -103,5 +103,73 @@ const LISTS = [
         en: "Don't be apologetic in your existence"
       }
     ]
+  },
+  {
+    id: "solo-missions",
+    date: "2026-07-08",
+    source: "https://www.instagram.com/reel/DWEY6p9RH0k/",
+    title: { de: "15 Solo Missions", en: "15 Solo Missions" },
+    items: [
+      {
+        de: "10 Kilometer laufen, ohne Musik oder Handy",
+        en: "Run 10 kilometers with no music or your phone"
+      },
+      {
+        de: "12 Stunden in der Natur verbringen, ohne mit jemandem zu sprechen",
+        en: "Spend 12 hours in nature without speaking to anybody"
+      },
+      {
+        de: "1000 Liegestütze an einem einzigen Tag",
+        en: "Do 1000 pushups in a single day"
+      },
+      {
+        de: "Einen Brief an dein Ich in 5 Jahren schreiben",
+        en: "Write a letter to your future self 5 years from now"
+      },
+      {
+        de: "Einen ganzen Tag ohne Ziel durch deine Stadt laufen",
+        en: "Walk an entire day through your city with no destination"
+      },
+      {
+        de: "7 Tage in Folge früh aufstehen und den Sonnenaufgang beobachten",
+        en: "Wake up early and watch the sunrise for 7 days in a row"
+      },
+      {
+        de: "50 Wörter einer neuen Sprache in einer Woche lernen",
+        en: "Learn 50 words in a new language in a single week"
+      },
+      {
+        de: "Eine ganze Woche ohne Zucker und Koffein",
+        en: "Spend a full week with no sugar or caffeine"
+      },
+      {
+        de: "Ein ganzes Philosophie-Buch lesen und die Gedanken dazu in einem Journal festhalten",
+        en: "Read an entire philosophy book and then write your reflections in a journal"
+      },
+      {
+        de: "3 Stunden irgendwo in der Stadt sitzen und einfach Menschen beobachten",
+        en: "Spend 3 hours sitting somewhere in your city out in public just observing people"
+      },
+      {
+        de: "48 Stunden lang überhaupt nicht meckern",
+        en: "Go 48 hours with no complaining whatsoever"
+      },
+      {
+        de: "Eine 3-stündige Solo-Fahrradtour ohne Handy und ohne Ziel",
+        en: "Take a solo 3 hour bike ride with no phone and no destination"
+      },
+      {
+        de: "Einen ganzen Tag lang einfach zufälligen Fremden helfen",
+        en: "Spend one full day just helping out random strangers"
+      },
+      {
+        de: "100 Dinge aufschreiben, für die du dankbar bist, in einem Rutsch",
+        en: "Write 100 things that you're grateful for in one sitting"
+      },
+      {
+        de: "60 Minuten komplett still und schweigend sitzen",
+        en: "Sit completely still and in silence for 60 minutes"
+      }
+    ]
   }
 ];
