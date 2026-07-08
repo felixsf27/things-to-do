@@ -1,0 +1,19 @@
+{
+  "name": "Things To Do",
+  "short_name": "Things To Do",
+  "description": "Checklisten aus Instagram-Reels, DE/EN",
+  "start_url": "index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0d0d1a",
+  "theme_color": "#0d0d1a",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

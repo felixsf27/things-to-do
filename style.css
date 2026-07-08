@@ -1,0 +1,160 @@
+:root {
+  --bg: #0d0d1a;
+  --bg-card: #16162a;
+  --accent: #7c6fff;
+  --text: #f2f2f7;
+  --text-dim: #9d9db0;
+  --border: #26263f;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1.25rem 0.75rem;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+header h1 {
+  font-size: 1.4rem;
+  margin: 0;
+  cursor: pointer;
+}
+
+.lang-toggle {
+  display: flex;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.lang-toggle button {
+  background: none;
+  border: none;
+  color: var(--text-dim);
+  padding: 0.35rem 0.75rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.lang-toggle button.active {
+  background: var(--accent);
+  color: white;
+}
+
+main {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 0.5rem 1.25rem 3rem;
+}
+
+.subtitle {
+  color: var(--text-dim);
+  margin: 0 0 1.5rem;
+  font-size: 0.95rem;
+}
+
+.card {
+  display: block;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1rem 1.1rem;
+  margin-bottom: 0.85rem;
+  text-decoration: none;
+  color: var(--text);
+}
+
+.card h2 {
+  font-size: 1.05rem;
+  margin: 0 0 0.4rem;
+}
+
+.card .meta {
+  color: var(--text-dim);
+  font-size: 0.85rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.progress-bar {
+  height: 5px;
+  border-radius: 999px;
+  background: var(--border);
+  margin-top: 0.6rem;
+  overflow: hidden;
+}
+
+.progress-bar > div {
+  height: 100%;
+  background: var(--accent);
+}
+
+.back-link {
+  display: inline-block;
+  color: var(--text-dim);
+  text-decoration: none;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.list-title {
+  font-size: 1.3rem;
+  margin: 0 0 0.25rem;
+}
+
+.list-source {
+  color: var(--text-dim);
+  font-size: 0.8rem;
+  margin: 0 0 1.25rem;
+}
+
+.list-source a {
+  color: var(--accent);
+}
+
+.item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.8rem 1rem;
+  margin-bottom: 0.6rem;
+  cursor: pointer;
+}
+
+.item input[type="checkbox"] {
+  margin-top: 0.2rem;
+  width: 1.1rem;
+  height: 1.1rem;
+  accent-color: var(--accent);
+  flex-shrink: 0;
+}
+
+.item span {
+  line-height: 1.4;
+}
+
+.item.done span {
+  color: var(--text-dim);
+  text-decoration: line-through;
+}
+
+.empty {
+  color: var(--text-dim);
+  text-align: center;
+  margin-top: 3rem;
+}
