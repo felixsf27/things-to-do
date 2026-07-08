@@ -171,5 +171,37 @@ const LISTS = [
         en: "Sit completely still and in silence for 60 minutes"
       }
     ]
+  },
+  {
+    id: "movies-again",
+    date: "2026-07-08",
+    source: "https://www.instagram.com/reel/DadI5AjugwY/",
+    title: { de: "10 Filme, die jeder gern nochmal zum ersten Mal sehen würde", en: "10 Movies Every Guy Wishes They Could Watch Again For The First Time" },
+    items: [
+      {
+        de: "Fight Club — Ein einsamer Versicherungsangestellter sucht seinen Sinn und startet aus Versehen eine Revolution mit Folgen, die niemand kommen sah",
+        en: "Fight Club — A lonely insurance employee searches for his purpose and accidentally starts a revolution with consequences nobody saw coming"
+      },
+      {
+        de: "Forrest Gump — Ein gewöhnlicher Mann erlebt aus Versehen einige der außergewöhnlichsten Ereignisse der amerikanischen Geschichte",
+        en: "Forrest Gump — An ordinary man accidentally lives through some of the most extraordinary events in American history"
+      },
+      {
+        de: "Whiplash — Ein Schlagzeuger und sein brutaler Mentor pushen so hart, dass man sich fragt, ob man wirklich Erfolg will oder nur die Vorstellung davon",
+        en: "Whiplash — A drummer and his brutal mentor push so hard you end up asking yourself if you really want success, or just the idea of it"
+      },
+      {
+        de: "Gattaca — In einer Welt, die deinen Wert bestimmt, weigert sich ein Mann, seine Grenzen zu akzeptieren, und beweist, dass man auf sich selbst setzen kann, auch wenn alle dagegen sind",
+        en: "Gattaca — In a world that determines what you're worth, a man refuses to accept his limits and proves that you can bet on yourself even when everybody tells you not to"
+      },
+      {
+        de: "Into the Wild — Ein junger Mann gibt sein ganzes Leben auf, um tief in der Wildnis zu leben, und entdeckt, dass Glück nur echt ist, wenn man es teilt",
+        en: "Into the Wild — A young man abandons his entire life to live deep in the wilderness and discovers that happiness is only real when shared"
+      },
+      {
+        de: "The Sixth Sense — Ein Kind vertraut einem Psychologen an, dass es Tote sehen kann, mit einem der verrücktesten Twists der Filmgeschichte",
+        en: "The Sixth Sense — A young child confides in a psychologist that he can see dead people, in a story that ends with one of the craziest twists in cinematic history"
+      }
+    ]
   }
 ];
